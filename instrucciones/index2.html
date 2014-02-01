@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Slideshow with jmpress.js</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Slideshow with jmpress.js" />
+        <meta name="keywords" content="jmpress, slideshow, container, plugin, jquery, css3" />
+        <meta name="author" content="for Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/style_ie.css" />
+		<![endif]-->
+		<!-- jQuery -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<!-- jmpress plugin -->
+		<script type="text/javascript" src="js/jmpress.min.js"></script>
+		<!-- jmslideshow plugin : extends the jmpress plugin -->
+		<script type="text/javascript" src="js/jquery.jmslideshow.js"></script>
+		<script type="text/javascript" src="js/modernizr.custom.48780.js"></script>
+		<noscript>
+			<style>
+			.step {
+				width: 100%;
+				position: relative;
+			}
+			.step:not(.active) {
+				opacity: 1;
+				filter: alpha(opacity=99);
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+			}
+			.step:not(.active) a.jms-link{
+				opacity: 1;
+				margin-top: 40px;
+			}
+			</style>
+		</noscript>
+    </head>
+    <body>
+        <div class="container">
+			<!-- Codrops top bar -->
+            <div class="codrops-top">
+                <a href="http://tympanus.net/Tutorials/ResponsiveHorizontalLayout/">
+                    <strong>&laquo; Previous Demo: </strong>Responsive Horizontal Layout
+                </a>
+                <span class="right">
+					<a href="http://blog.artcore-illustrations.de/aicons/">Artcore Icons by Artcore Illustration</a>
+                    <a href="http://tympanus.net/codrops/2012/04/05/slideshow-with-jmpress-js/">
+                        <strong>Back to the Codrops Article</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+			<header>
+				<h1>Instrucciones <span>Tamagotchi</span></h1>
+				<h2>Todo lo que debes saber sobre tu nueva mascota</h2>
+				<nav class="codrops-demos">
+					<a href="index.html">Default</a>
+					<a class="current-demo" href="index2.html">Autoplay</a>
+					<a href="index3.html">Different Layout</a>
+				</nav>
+			</header>
+			<section id="jms-slideshow" class="jms-slideshow">
+				<div class="step" data-color="color-2">
+					<div class="jms-content">
+						<h3>¿Qué es Tamagotchi?</h3>
+				        	<p>Tamagotchi es un juego en el que tenemos que cuidar de una mascota: darle de comer, jugar con ella, darle cariño, cuidar de que haga sus necesidades, acostarla... toda la dedicación que le daríamos a una mascota de carne y hueso, solo que esta es virtual.</p>
+					</div>
+                    	<img src="images/monster1.png" />
+				</div>
+				<div class="step" data-color="color-1" data-y="900" data-rotate-x="80">
+					<div class="jms-content">
+						<h3>Menú Superior</h3>
+  					        <li><b>Empezar juego:</b> debes escoger una mascota. En todo momento podrás ver su status (niveles de vida, salud, comida, higiene, juegos, educación, afecto, ocio y dormir)</ul>
+                            <li><b>Pausar juego:</b> detiene el juego y guarda el status.</li>
+                            <li><b>Cambiar mascota:</b> seleccionas otra mascota.</li>
+                            <li><b>Geolocalización:</b> aparece un mapa indicando tu ubicación. </li>
+                            <li><b>Cambiar idioma:</b> selecciona un idioma.</li>
+                            <li><b>Instrucciones:</b> como jugar al tamagotchi. </li>
+					</div>
+                   <img src="images/monster2.png" />
+				</div>
+				<div class="step" data-color="color-4" data-x="-100" data-z="1500" data-rotate="170">
+					<div class="jms-content">
+						<h3>Botones Inferiores</h3>
+					<p>En la parte inferior de la panatalla estan los botones: </p>
+                        <li><b>Seleccionar</b></li>
+                        <li><b>Aceptar</b></li>
+                        <li><b>Cancelar</b></li>
+                   	</div>
+					<img src="images/3monster.png" />
+				</div>
+				<div class="step" data-color="color-5" data-x="3000">
+					<div class="jms-content">
+						<h3>Funciones Laterales</h3>
+					        <li><b>Salud:</b> elige entre medicamento o una inyección.</ul>
+                            <li><b>Comida:</b> puedes escoger entre manzana, pizza y caramelo.</li>
+                            <li><b>Higiene:</b> limpialo con una toallita o dale un baño.</li>
+                            <li><b>Juego:</b> haz que juegue con un coche, un balón o un peluche. </li>
+                            <li><b>Educación:</b> aprenderá leyendo, escuchado y escribiendo.</li>                            <li><b>Afecto:</b> como jugar al tamagotchi. </li>
+                            <li><b>Afecto:</b>dale cariño con un beso o una caricia.</li>
+                            <li><b>Ocio:</b>deja que tu mascota vea la tele o escuche música.</li>
+                            <li><b>Dormir:</b> una siesta en el sofa o una cabezada en la cama. </li>
+					</div>
+                    <img src="images/monster3.png" />
+			  	</div>
+				<div class="step" data-color="color-1" data-x="4500" data-z="1000" data-rotate-y="45">
+					<div class="jms-content">
+						<h3>Conoce a las mascotas</h3>
+					        <li><b>Mametchi:</b> El más sano y obediente de todos, estas de suerte. Este es el que más tiempo suele vivir. Es muy listo y activo.</ul>
+                            <li><b>Tarakotchi:</b> Excéntrico y provocativo donde los haya, es raro con ganas.</li>
+                            <li><b>Masktchi:</b> Es uno de los más apreciados de todos, ya que se comenta que este personaje es el más parrandero y vividor de todos.</li>
+					</div>
+                   <img src="images/monsterspeque.png" /> 
+				</div>
+			</section>
+        </div>
+		<script type="text/javascript">
+			$(function() {
+				
+				var jmpressOpts	= {
+					animation		: { transitionDuration : '0.8s' }
+				};
+				
+				$( '#jms-slideshow' ).jmslideshow( $.extend( true, { jmpressOpts : jmpressOpts }, {
+					autoplay	: true,
+					bgColorSpeed: '0.8s',
+					arrows		: false
+				}));
+
+			});
+		</script>
+    </body>
+</html>

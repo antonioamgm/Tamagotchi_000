@@ -1,0 +1,268 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    background: #292B3D;
+    color:#fff;
+    font:14px/1.3 Arial,sans-serif;
+    margin: auto;
+	width: 80%;
+    overflow: hidden;
+}
+
+/*******CONTENIDO *********/
+article #contenido{
+  overflow:  hidden;
+  background-color: #99CCFF;
+  width: 99%;
+}
+
+/*************** CABECERA  ******************/
+header {
+   /*background-image: url('../imagenes/imagesmenu/cabeceratamagotchi.jpg);*/
+    margin:auto;
+	width: 100%;
+}
+
+header .cabecera, .wrap {
+	float:left;
+	margin-left:3em;
+	margin-bottom:1.2em;
+}
+
+header p {
+	margin-top: 0.05em;
+    padding: .2em;
+	font-weight: bold;
+	font-size: 30px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	text-align: center;
+	/*float:right;*/
+	border:solid 5px #000000;
+	/*-moz-border: 68px;
+	-webkit-border-radius-topleft: 68px;
+	-ms-border-radius-topleft: 68px;
+	-o-border-radius-topleft: 68px;
+	-moz-border-radius-topright:68px;
+	-webkit-border-radius-topright:68px;
+	-ms-border-radius-topright:68px;
+	-o-border-radius-topright:68px;
+	-moz-border-radius-bottomleft:68px;
+	-webkit-border-radius-bottomleft:68px;
+	-ms-border-radius-bottomleft:68px;
+	-o-border-radius-bottomleft:68px;
+	-moz-border-radius-bottomright:68px;
+	-webkit-border-radius-bottomright:68px;
+	-ms-border-radius-bottomright:68px;
+	-o-border-radius-bottomright:68px;
+	-webkit-border-top-left-radius:68px;
+	-moz-border-top-left-radius:68px;
+	-ms-border-top-left-radius:68px;
+	-o-border-top-left-radius:68px;
+	-webkit-border-top-right-radius:68px;
+	-moz-border-top-right-radius:68px;
+	-ms-border-top-right-radius:68px;
+	-o-border-top-right-radius:68px;
+	-webkit-border-bottom-left-radius:68px;
+	-moz-border-bottom-left-radius:68px;
+	-ms-border-bottom-left-radius:68px;
+	-o-border-bottom-left-radius:68px;
+	-webkit-border-bottom-right-radius:68px;
+	-moz-border-bottom-right-radius:68px;
+	-ms-border-bottom-right-radius:68px;
+	-o-border-bottom-right-radius:68px; */
+	border-top-left-radius:68px;
+	border-top-right-radius:68px;
+	border-bottom-left-radius:68px;
+	border-bottom-right-radius:68px;
+    background:-webkit-gradient(linear, 80% 20%, 10% 21%, from(#088A85), to(#FF4E28));
+    /*background:-moz-linear-gradient(80% 20%, 10% 21%, from(#088A85), to(#FF4E28));*/
+    background:-moz-linear-gradient(10% 21%, #088A85, #FF4E28);
+	background:-ms-gradient(linear, 80% 20%, 10% 21%, from(#088A85), to(#FF4E28));
+	background:-o-gradient(linear, 80% 20%, 10% 21%, from(#088A85), to(#FF4E28));
+}
+
+/*************** MENU VERTICAL ******************/
+#menuderecha {
+    border:3px solid #3e4547;
+    border-radius:30px;
+    box-shadow:2px 2px 8px #000000;
+    width: 25%;
+	float:right;
+    overflow: hidden;
+	/*margin-left:3em;*/
+	/*margin-bottom:1.2em;*/
+}
+#menuderecha, #menuderecha ul {
+    list-style:none;
+    padding:0;
+}
+#menuderecha ul {
+    position:relative;
+    z-index:-1;
+}
+#menuderecha li {
+    position:relative;
+    z-index:100;
+}
+#menuderecha ul li {
+    margin-top:-23px;
+   /*
+    -moz-transition:  0.4s linear 0.4s;
+    -ms-transition: 0.4s linear 0.4s;
+    -o-transition: 0.4s linear 0.4s;
+    -webkit-transition: 0.4s linear 0.4s; */
+    transition: 0.4s linear 0.4s;
+}
+#menuderecha li a {
+    background-color:#d4d5d8;
+    color:#000;
+    display:block;
+    font-size:14px;
+    font-weight:bold;
+    line-height:40px;
+    outline:0;
+    padding-left:25px;
+    text-decoration:none;
+}
+#menuderecha li a.sub {
+    background:#d4d5d8 url("../imagenes/imagesmenu/down.gif") no-repeat;
+}
+#menuderecha li a + img {
+    cursor:pointer;
+    display:none;
+    left:0;
+    position:absolute;
+    top:0;
+    /* height:200px;
+    width:200px; */
+}
+#menuderecha li a img {
+    border-width:0px;
+    line-height:50px;
+    /*margin-right:10px;*/
+    vertical-align:middle;
+    /*height:200px;
+    width:28px;*/
+}
+#menuderecha li a:hover {
+    background-color:#bcbdc1;
+}
+#menuderecha ul li a {
+    background-color:#eee;
+    border-bottom:1px solid #ccc;
+    color:#000;
+    font-size:11px;
+    line-height:22px;
+}
+#menuderecha ul li a:hover {
+    background-color:#ddd;
+    color:#444;
+}
+#menuderecha ul li a img {
+    border-width:0px;
+    line-height:22px;
+    margin-right:5px;
+    vertical-align:middle;
+    /*height:20px;
+    width:20px; */
+}
+#menuderecha a.sub:focus {
+    background:#bcbdc1;
+    outline:0;
+}
+#menuderecha a:focus ~ ul li {
+    margin-top:0;
+
+   /* -moz-transition:  0.4s linear;
+    -ms-transition: 0.4s linear;
+    -o-transition: 0.4s linears;
+    -webkit-transition: 0.4s linears;  */
+    transition: 0.4s linear;
+}
+#menuderecha a:focus + img, #menuderecha a:active + img {
+    display:block;
+}
+#menuderecha a.sub:active {
+    background:#bcbdc1;
+    outline:0;
+}
+#menuderecha a:active ~ ul li {
+    margin-top:0;
+}
+#menuderecha ul:hover li {
+    margin-top:0;
+}
+
+/*.container {
+    background: url("../images/robot.png") no-repeat scroll 90px 35px rgba(255, 255, 255, 0.6);
+    border: 1px solid #FFFFFF;
+    height:400px;
+    margin:20px auto;
+    padding:10px;
+    position:relative;
+    width:715px;
+
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}  */
+
+/******* AREA DE JUEGO *************/
+#area{
+    width: 73%;
+	float:left;
+    border-radius: 20px;
+    height:1%;
+}
+
+#salida{
+    /*background-color: #F8F8F8;*/
+    width: 100%;
+	/*float:left;
+    border-radius: 20px;
+    height:1%; */
+}
+
+#salida img{
+  border-radius: 20px;
+  size: 100%;
+}
+
+/***** PIE DE PAGINA (BOTONES)*****/
+footer {
+    /*position: relative;*/
+    float: left;
+    left: 0;
+	font-family: cursive;
+	font-size: 6px;
+	width:80%;
+    height: 10%;
+	margin-bottom:30px;
+}
+
+div#boton{
+  margin: 0 200px;
+  width: 40%;
+}
+
+button.botones{
+    margin-top: 5px;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 5em 1em / 5em 1em;
+    background: #99CCFF;
+    /*outline: 0;
+    outline-style: none;
+    outline-width: 0; */
+}
+
+.focused {
+    background: #abcdef;
+}
+
+img span{
+  float: right;
+}

@@ -1,0 +1,348 @@
+﻿body {
+	background-color: green;
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+    overflow: hidden;
+}
+
+#bg {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 125%;
+}
+
+header {
+	background-image: url('../imagesmenu/cabeceratamagotchi.jpg');
+	background-color: yellow;
+	height:170px;
+    margin:auto;
+    width:100%;
+}
+
+header .cabecera {
+	width: 70%;
+	float:left;
+	margin-left:3em;
+	margin-bottom:1.2em;
+}
+
+header p {
+	margin-top: 0.05em;
+	font-weight: bold;
+	font-size: 30px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	text-align: center;
+	float:right;
+	border:solid 5px #000000;
+	-moz-border-radius-topleft: 68px;
+	-webkit-border-radius-topleft: 68px;
+	-ms-border-radius-topleft: 68px;
+	-o-border-radius-topleft: 68px;
+	-moz-border-radius-topright:68px;
+	-webkit-border-radius-topright:68px;
+	-ms-border-radius-topright:68px;
+	-o-border-radius-topright:68px;
+	-moz-border-radius-bottomleft:68px;
+	-webkit-border-radius-bottomleft:68px;
+	-ms-border-radius-bottomleft:68px;
+	-o-border-radius-bottomleft:68px;
+	-moz-border-radius-bottomright:68px;
+	-webkit-border-radius-bottomright:68px;
+	-ms-border-radius-bottomright:68px;
+	-o-border-radius-bottomright:68px;
+	-webkit-border-top-left-radius:68px;
+	-moz-border-top-left-radius:68px;
+	-ms-border-top-left-radius:68px;
+	-o-border-top-left-radius:68px;
+	-webkit-border-top-right-radius:68px;
+	-moz-border-top-right-radius:68px;
+	-ms-border-top-right-radius:68px;
+	-o-border-top-right-radius:68px;
+	-webkit-border-bottom-left-radius:68px;
+	-moz-border-bottom-left-radius:68px;
+	-ms-border-bottom-left-radius:68px;
+	-o-border-bottom-left-radius:68px;
+	-webkit-border-bottom-right-radius:68px;
+	-moz-border-bottom-right-radius:68px;
+	-ms-border-bottom-right-radius:68px;
+	-o-border-bottom-right-radius:68px;
+	border-top-left-radius:68px;
+	border-top-right-radius:68px;
+	border-bottom-left-radius:68px;
+	border-bottom-right-radius:68px;
+	background:-webkit-gradient(linear, 80% 20%, 10% 21%, from(#9E8539), to(#FF4E28));
+	background:-moz-gradient(linear, 80% 20%, 10% 21%, from(#9E8539), to(#FF4E28));
+	background:-ms-gradient(linear, 80% 20%, 10% 21%, from(#9E8539), to(#FF4E28));
+	background:-o-gradient(linear, 80% 20%, 10% 21%, from(#9E8539), to(#FF4E28));
+}
+
+#contenido {
+	margin:auto;
+	width:75%;
+    height:150%;
+	overflow:hidden;
+	background-color:violet;
+	margin-bottom:5px;
+}
+
+
+//@charset 'UTF-8';
+/* Starter CSS for Flyout Menu */
+#cssmenu {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  float: right;
+  
+  
+}
+#cssmenu section {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu section {
+  position: relative;
+  z-index: 597;
+  float: left;
+}
+#cssmenu section {
+  float: left;
+  min-height: 1px;
+  line-height: 1em;
+  vertical-align: middle;
+}
+#cssmenu section.hover,
+#cssmenu section:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+#cssmenu ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 598;
+  width: 100%;
+}
+#cssmenu section {
+  float: none;
+}
+#cssmenu section {
+  visibility: visible;
+}
+#cssmenu ul ul {
+  top: 0;
+  left: 100%;
+}
+#cssmenu ul li {
+  float: none;
+}
+/* Custom Stuff */
+#cssmenu span,
+#cssmenu a {
+  display: inline-block;
+  font-family: cursive;
+  font-size: 12px;
+  text-decoration: none;
+}
+#cssmenu {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -ms-background-clip: padding;
+  -o-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -o-background-clip: padding-box;
+  background-clip: padding-box;
+  -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.15);
+  font-weight: 600;
+  width: 200px;
+}
+#cssmenu:after,
+#cssmenu section:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#cssmenu > ul > li:first-child {
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  -ms-border-radius: 5px 5px 0 0;
+  -o-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -ms-background-clip: padding;
+  -o-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -o-background-clip: padding-box;
+  background-clip: padding-box;
+}
+#cssmenu > ul > li:last-child {
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  -ms-border-radius: 0 0 5px 5px;
+  -o-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -ms-background-clip: padding;
+  -o-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -o-background-clip: padding-box;
+  background-clip: padding-box;
+}
+#cssmenu > ul > li ul ul li:first-child {
+  -moz-border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -ms-border-radius: 0 5px 0 0;
+  -o-border-radius: 0 5px 0 0;
+  border-radius: 0 5px 0 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -ms-background-clip: padding;
+  -o-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -o-background-clip: padding-box;
+  background-clip: padding-box;
+}
+#cssmenu > ul > li ul ul li:last-child {
+  -moz-border-radius: 0 0 5px 0;
+  -webkit-border-radius: 0 0 5px 0;
+  -ms-border-radius: 0 0 5px 0;
+  -o-border-radius: 0 0 5px 0;
+  border-radius: 0 0 5px 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -ms-background-clip: padding;
+  -o-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -o-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+#cssmenu section {
+  width: 100%;
+}
+#cssmenu section {
+  background: #c0bebf url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA0CAMAAAB8fKKlAAAAmVBMVEXy7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7erx7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7ery7eoO3g4TAAAAMnRSTlP8+fbz7+vn497Z1M/KxL+5s66oopuVj4mDfHZwamRdV1FMRkA7NTArJiEcGBQQDAkGA02z+X0AAABLSURBVHheDcGDEQMBAACwvFnbtrv/cO3F949AKBJLpDK5QqlSa2hqaevo6ukbGBoZm5iamVtYWlnb2NrZOzg6Obu4url7eHp5+/wAxikFLnlTZcYAAAAASUVORK5CYII=) repeat-x;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f2edea), color-stop(1, #c0bebf));
+  background-image: -webkit-linear-gradient(top, #f2edea, #c0bebf);
+  background-image: -moz-linear-gradient(top, #f2edea, #c0bebf);
+  background-image: -ms-linear-gradient(top, #f2edea, #c0bebf);
+  background-image: -o-linear-gradient(top, #f2edea, #c0bebf);
+  background-image: linear-gradient(#f2edea, #c0bebf);
+}
+#cssmenu section:hover,
+#cssmenu section.active {
+  background: #606a76 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA0CAMAAAB8fKKlAAAAmVBMVEVKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmJKVmL///9KVmL3Z0MtAAAAMnRSTlP8+fby7+vm4t3Y087Iw723sauln5mTjIaAeXNsZmBaVE5IQjw3MSwnIh0ZFBANCQYDAAm6nKYAAABLSURBVHheDcGDEQMBAACwvFnbtrv/cO3F949AKBJLpDK5QqlSa2hqaevo6ukbGBoZm5iamVtYWlnb2NrZOzg6Obu4url7eHp5+/wAxikFLnlTZcYAAAAASUVORK5CYII=) repeat-x;
+  -moz-box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.15);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4a5662), color-stop(1, #606a76));
+  background-image: -webkit-linear-gradient(top, #4a5662, #606a76);
+  background-image: -moz-linear-gradient(top, #4a5662, #606a76);
+  background-image: -ms-linear-gradient(top, #4a5662, #606a76);
+  background-image: -o-linear-gradient(top, #4a5662, #606a76);
+  background-image: linear-gradient(#4a5662, #606a76);
+}
+#cssmenu section:hover > a,
+#cssmenu section.active > a {
+  color: #FFF;
+}
+#cssmenu a {
+  color: #666666;
+  line-height: 160%;
+  padding: 16px 8px 16px 28px;
+  width: 164px;
+}
+#cssmenu section {
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  width: 200px;
+}
+#cssmenu section {
+  background: #606a76;
+  border-bottom: 1px solid #59636F;
+  -moz-box-shadow: inset 0 1px 0 #66707c;
+  -webkit-box-shadow: inset 0 1px 0 #66707c;
+  -ms-box-shadow: inset 0 1px 0 #66707c;
+  -o-box-shadow: inset 0 1px 0 #66707c;
+  box-shadow: inset 0 1px 0 #66707c;
+}
+#cssmenu section:hover {
+  background: #4a5662;
+}
+#cssmenu section a {
+  color: #FFF;
+}
+#cssmenu section a,
+#cssmenu section a span {
+  font-size: 12px;
+}
+
+#imagen1 {
+    width: 757px;
+	height: 200px;
+	margin-top: -260px;
+	margin-left: -275px;
+	left: 34%;
+	top: 50%;
+	position: absolute;
+	float: left;
+	z-index:0;
+}
+
+#articulo {
+	margin:auto;
+	width:75%;
+	background-color: blue;
+	margin-bottom:30px;
+	float: left;
+}
+
+footer {
+	font-family: cursive;
+	font-size: 6px;
+	margin: 0px auto;
+	width:75%;
+	background-color:red;
+	margin-bottom:30px;
+}
+
+footer p {
+	font-size: 12px;
+	padding: 2px 0;
+	text-align: center;
+}
+
+
+

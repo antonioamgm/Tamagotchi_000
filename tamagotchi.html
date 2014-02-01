@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="keywords" content="Tamagotchi, Mascota Virtual, Juego"/>
+        <meta name="author" content="Andrea, Antonio, Eduardo, Hector, Julia y Natalia"/>
+        <meta name="description" content="Juego de un Tamagotchi"/>
+        <title>Tamagotchi</title>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/tamagotchi.js"></script>
+        <script type="text/javascript" src="js/codificacion.js"></script>
+        <script type="text/javascript" src="json/test.js"></script>
+        <script type="text/javascript" src="js/modernizr.js"></script>
+        <link href="menuhorizontal/style.css" media="screen" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="menuHorizontal/iconic.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
+        <script type="text/javascript">
+
+        </script>
+    </head>
+
+    <body>
+        <!--Cabecera de la web-->
+        <!--Menú Horizontal con opciones del juego-->
+        <header class="cabecera">
+            <nav class="menuHorizontal">
+                <ul class="menu">
+                    <li>
+                        <a onclick="fntEmpezarJuego();" href="#" id="jugar" tabindex="1">
+                            Juego
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="fntPausarJuego();" href="#" id="pausar" tabindex="2">
+                            Pausar
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="fntGeolocalizar();" href="geolocalizacion.html" id="geo" tabindex="3">
+                            Geolocalización
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="fntCambiarMascota();" href="#" id="mascota" tabindex="4">
+                            Mascota
+                        </a>
+                    </li>
+                    <!--
+                    <li>
+                        <a href="#" id="idioma" name="idioma" tabindex="1">
+                            Cambiar Idioma
+                        </a>
+                    </li>
+                    -->
+                    <li>
+                        <a href="instrucciones/index2.html" id="ver" name="ver" tabindex="5">
+                            Instrucciones
+                        </a>
+                    </li>
+                    <li>
+                        <a onClick="document.getElementById('audio').play()" href="#" id="musicaplay" tabindex="6">
+                            Música
+                        </a>
+                    </li>
+                    <li>
+                        <a onClick="document.getElementById('audio').pause()" href="#" id="musicastop" tabindex="7">
+                            Sin música
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <article id="contenido">
+            <!--Menú Vertical con opciones de la mascota-->
+            <nav id="menuderecha">
+                <ol>
+                    <li>
+                        <a href="#" id="comida">
+                            <span>Comida</span>   
+                            <img src="imagenes/Iconos/manzana.png" tabindex="10" width="30" height="30" alt="imagen de una manzana"  id="manzana" draggable="true" ondragstart="start(event);" ondragend="end(event)" >
+                            <img src="imagenes/Iconos/pizza.png" tabindex="11" width="30" height="30" alt="imagen de una pizza" id="pizza" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                            <img src="imagenes/Iconos/caramelo.png" tabindex="12" width="30" height="30" alt="imagen de un caramelo" id="caramelo" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="higiene">
+                            <span>Higiene</span>
+                            <img src="imagenes/Iconos/toallita.png" tabindex="4" width="30" height="30" alt="imagen de una toallita" id="toallita" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                            <img src="imagenes/Iconos/ducha.png" tabindex="4" width="30" height="30" alt="imagen de una ducha" id="ducha" draggable="true" ondragstart="start(event)" ondragend="end(event)">  
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="juegos">
+                            <span>Juegos</span>
+                            <img src="imagenes/Iconos/coche.png" tabindex="5" width="30" height="30" alt="imagen de un coche" id="coche" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                            <img src="imagenes/Iconos/pelota.png" tabindex="5" width="30" height="30" alt="imagen de una pelota" id="pelota" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                            <img src="imagenes/Iconos/oso.png" tabindex="5" width="30" height="30" alt="imagen de un oso de peluche" id="peluche" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="educar">
+                            <span>Educación</span>
+                            <img src="imagenes/Iconos/leer.png" tabindex="6" width="30" height="30" alt="imagen de un libro" id="libro" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                            <img src="imagenes/Iconos/escuchar.png" tabindex="6" width="30" height="30" alt="imagen de una pizarra" id="pizarra" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                            <img src="imagenes/Iconos/escribir.png" tabindex="6" width="30" height="30" alt="imagen de un lápiz" id="lapiz" draggable="true" ondragstart="start(event)" ondragend="end(event)">   
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="afecto">
+                            <span>Afecto</span>
+                            <img src="imagenes/Iconos/besar.png" tabindex="7" width="30" height="30" alt="imagen de un beso"  id="besar" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                            <img src="imagenes/Iconos/caricias.png" tabindex="7" width="30" height="30" alt="imagen de una caricia"  id="acariciar" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="ocio">
+                            <span>Ocio</span>
+                            <img src="imagenes/Iconos/tv.png" tabindex="8" width="30" height="30" alt="imagen de una tv"  id="tv" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                            <img src="imagenes/Iconos/musica.png" tabindex="8" width="30" height="30" alt="imagen de música"  id="musica" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="dormir" name="dormir">
+                            <span>Dormir</span>
+                            <img src="imagenes/Iconos/sofa.png" tabindex="9" width="30" height="30" alt="imagen de un sofá"  id="sofa" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                            <img src="imagenes/Iconos/cama.png" tabindex="9" width="30" height="30" alt="imagen de una cama"  id="cama" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="salud">
+                            <span>Salud</span>
+                            <img src="imagenes/Iconos/jarabe.png" tabindex="8" width="30" height="30" alt="imagen de un jarabe" id="jarabe" draggable="true" ondragstart="start(event)" ondragend="end(event)" >
+                            <img src="imagenes/Iconos/inyeccion.png" tabindex="9" width="30" height="30" alt="imagen de una inyección" id="inyeccion" draggable="true" ondragstart="start(event)" ondragend="end(event)" >
+                        </a>
+                    </li>
+                </ol>
+            </nav>
+
+            <section id="area">
+                <div id="salida" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return clonar(event)">
+                    <!--<iframe src="ElIncreibleMundoDeBorderRadius.html" width="800" height="550"></iframe>-->
+                    <canvas id="pantalla" width="600"  height="400">
+
+                    </canvas>
+                    <audio id="audio">
+                        <source src="sonidos/Gameplay.wav" type="audio/ogg" />
+                    </audio>
+                    <canvas id="estado" width="600" height="100">
+                    </canvas>
+                </div>
+            </section>
+
+        </article>
+
+        <footer>
+            <div id="boton">
+                <button class="botones" id="btnSeleccionar" name="btnSeleccionar" tabindex="10">Seleccionar</button>
+                <button class="botones" id="btnAceptar" name="btnAceptar" tabindex="10">Aceptar</button>
+                <button class="botones" id="btnCancelar" name="btnCancelar" tabindex="10">Cancelar</button>
+            </div>
+        </footer>
+        <script type="text/javascript">
+            if (document.createElement('audio').canPlayType) {
+                if (!document.createElement('audio').canPlayType('audio/mpeg') &&
+                        !document.createElement('audio').canPlayType('audio/ogg')) {
+
+                    document.getElementById('audio').style.display = 'none';
+                } else {
+                    // HTML5 audio + mp3 support
+                    document.getElementById('audio').style.display = 'block';
+                }
+            }
+        </script>
+    </body>
+</html>
+
+<!-- crea un objeto de nuestra clase Tamagotchi
+http://translate.googleusercontent.com/translate_c?depth=1&hl=es&prev=/search%3Fq%3Dtutorial%2Bde%2Btamagotchi%26biw%3D1280%26bih%3D674&rurl=translate.google.es&sl=en&u=http://moock.org/lectures/introToOOP/&usg=ALkJrhjDnOMQo0M7tlZMUEmCDSW1JYDGvg-->
