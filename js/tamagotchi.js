@@ -56,7 +56,7 @@ var tamagotchi = {
         //console.log('Estado de animo:'+ this.estadoanimo);
         //document.getElementById('salida').img.src="elegidfondo/tama-bg.jpg" ;
         //}
-        return 'Estado de animo: ' + this.estadoanimo;
+        return this.estadoanimo;
     },
     //controla el peso y el hambre del muñeco
     fntComer: function(comer) {
@@ -104,7 +104,7 @@ var tamagotchi = {
         }
         this.fntActualizaEstado('estado');
         //document.getElementById('valorafecto').value='Control peso:' +this.peso+' Control hambre:'+this.hambre;
-        return false;
+        return this.hambre;
     },
     //controlamos la medicación
     fntMedicar: function(medicina) {
@@ -244,16 +244,16 @@ var tamagotchi = {
 
     },
     fntJugar: function(juguete) {
-        //debugger;
+        debugger;
         var hambremax = this.max;
         var valor = juguete;
         //var valor=eval(juguete);
         switch (valor) {
             case this.jugar.coches://coches
                 //controlamos el aumento del hambre
-                if (this.hambre <= hambremax - this.jugar.coches) {
+                if (this.hambre < (hambremax - this.jugar.coches)) {
                     this.hambre += this.jugar.coches;
-                } else if (this.hambre <= hambremax - this.jugar.peluche) {
+                } else if (this.hambre < hambremax) {
                     this.hambre += this.jugar.peluche;
                 }
                 //controlamos el descenso de peso
@@ -271,12 +271,12 @@ var tamagotchi = {
                 break;
             case this.jugar.pelota: //pelota
                 //controlamos el hambre
-                if (this.hambre <= hambremax - this.jugar.pelota) {
+                if (this.hambre < (hambremax - this.jugar.pelota)) {
                     this.hambre += this.jugar.pelota;
-                } else if (this.hambre <= hambremax - this.jugar.coches) {
+                } else if (this.hambre < ( hambremax - this.jugar.coches)) {
                     this.hambre += this.jugar.coches;
-                } else if (this.hambre <= hambremax - this.jugar.peluche) {
-                    this.hambre += this.jugar.pelota;
+                } else if (this.hambre < hambremax) {
+                    this.hambre += this.jugar.peluche;
                 }
                 //controlamos el peso
                 if (this.peso > (this.pesomin + this.jugar.pelota)) {
@@ -297,7 +297,7 @@ var tamagotchi = {
                 break;
             case this.jugar.peluche: //peluche
                 //controlamos el aumento del hambre
-                if (this.hambre < hambremax - this.jugar.peluche) {
+                if (this.hambre < hambremax) {
                     this.hambre += this.jugar.peluche;
                 }
                 //controlamos el descenso de peso
